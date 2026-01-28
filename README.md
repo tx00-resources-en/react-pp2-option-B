@@ -6,7 +6,7 @@ In this paired activity, you will transform an existing HTML webpage into a Reac
 
 ## How you will work (paired, not strict pair programming)
 
-Some students feel nervous about “strict” pair programming. That’s totally ok. For this activity, you will work as **two problem-solvers**:
+Some students feel nervous about “strict” pair programming. That's totally ok. For this activity, you will work as **two problem-solvers**:
 
 - You can both talk, think, and type.
 - Your goal is to **try together first**, then reveal help only if you need it.
@@ -27,15 +27,14 @@ Example format you will see:
 
 When you get stuck:
 
-1. Re-read the instruction and the HTML section you’re converting.
+1. Re-read the instruction and the HTML section you're converting.
 2. Ask your partner to explain their approach.
 3. Try a tiny experiment (change one thing, refresh).
 4. Open the solution for that iteration.
-5. Ask the instructor.
+5. Ask the teacher.
 
 ### Recommended rhythm
 
-- Timebox attempts: 8–12 minutes per step.
 - After each iteration, the app should still run.
 - Commit after each iteration with a clear message.
 
@@ -47,6 +46,7 @@ When you get stuck:
 4. After each iteration, commit with a relevant message: [./github-push-pull.md#commit-messages](./github-push-pull.md#commit-messages)
 5. Add the repo link to your reflection journal.
 6. Keep the repository private until Sunday.
+7. If any step is unclear or you're unable to complete it, don't hesitate to call the teacher to the breakout room for help.
 
 ## Instructions
 
@@ -56,8 +56,8 @@ Goal: get the app running locally and understand the folder structure.
 
 Try it first (10 minutes):
 
-1. Clone the starter into a folder named `week3-fe-pair-programming`.
-2. Remove the starter’s Git history (`.git` folder) so you can connect it to your GitHub repo.
+1. [Clone the starter](https://github.com/tx00-resources-en/react-pp2) into a folder named `week3-fe-pair-programming`.
+2. Remove the starter's Git history (`.git` folder) so you can connect it to your GitHub repo.
 3. Install dependencies and start the dev server.
 4. Confirm the page loads in the browser.
 
@@ -66,7 +66,7 @@ Quick orientation (beginner-friendly):
 - `index.html` is the single page Vite serves.
 - `src/main.jsx` mounts your React app into `<div id="root">`.
 - `src/App.jsx` is your top-level component.
-- `src/data.js` contains arrays you’ll map over later.
+- `src/data.js` contains arrays you'll map over later.
 - `src/App.css` already has the full styling.
 
 If you want a gentle overview of Vite project structure, read: [./vite-project.md](./vite-project.md)
@@ -81,7 +81,7 @@ git clone https://github.com/tx00-resources-en/react-pp2 week3-fe-pair-programmi
 cd week3-fe-pair-programming
 ```
 
-2) Remove the starter’s Git history:
+2) Remove the starter's Git history:
 
 - Windows (PowerShell):
 
@@ -104,7 +104,7 @@ npm run dev
 
 4) Sanity check: Font Awesome
 
-Open `index.html` and verify this is in `<head>` (if it’s already there, you’re done):
+Open `index.html` and verify this is in `<head>` (if it's already there, you're done):
 
 ```html
 <link
@@ -124,7 +124,7 @@ Goal: replace the placeholder `Navbar` component with the real Navbar HTML conve
 Try it first (10–12 minutes):
 
 1. Open [./Original-HTML/index.html](./Original-HTML/index.html).
-2. Identify the sections (so you know what you’re converting):
+2. Identify the sections (so you know what you're converting):
    - Navbar: lines 15 - 48
    - Hero: lines 50 - 61
    - About: lines 63 - 88
@@ -138,7 +138,7 @@ Try it first (10–12 minutes):
 Beginner tips:
 
 - JSX uses `className`, not `class`.
-- Images in React should be imported (don’t keep `src="images/..."`).
+- Images in React should be imported (don't keep `src="images/..."`).
 
 <details>
 <summary>Solution (Iteration 1)</summary>
@@ -665,7 +665,7 @@ Try it first (12–15 minutes):
 2. In `Tours.jsx`, import `tours` from `src/data.js` and map into `<Tour />`.
 3. Add a `Title` to the tours section.
 
-Beginner tip: if your images don’t show up, don’t panic — in this iteration you should use the `image` prop coming from `data.js` (it’s already imported there).
+Beginner tip: if your images don't show up, don't panic — in this iteration you should use the `image` prop coming from `data.js` (it's already imported there).
 
 <details>
 <summary>Solution (Iteration 4)</summary>
@@ -734,7 +734,7 @@ export default Tours
 ----
 ### Iteration 5: 
 
-Goal: create reusable nav links from data (so you don’t copy/paste `<li><a ...>` everywhere).
+Goal: create reusable nav links from data (so you don't copy/paste `<li><a ...>` everywhere).
 
 Try it first (10–12 minutes):
 
@@ -906,7 +906,7 @@ Good news: **you usually do not need to change any CSS** for this iteration.
 - The styling is attached to the `<nav className='navbar'>...</nav>` element (see the `.navbar` rules in `App.css`).
 - Wrapping it in `<header>...</header>` does not remove or change that `navbar` class.
 
-If you *want* to style the header later, you can give it a class (example: `<header className='site-header'>`) and add CSS for `.site-header` — but it’s optional for this activity.
+If you *want* to style the header later, you can give it a class (example: `<header className='site-header'>`) and add CSS for `.site-header` — but it's optional for this activity.
 
 Try it first (10–12 minutes):
 
@@ -1016,7 +1016,7 @@ Keep Navbar responsible only for the `<nav>` and its contents (logo, links, icon
 ----
 ### Iteration 8 (Optional): 
 
-This iteration is optional. If you’re new to React, it’s totally fine to skip it.
+This iteration is optional. If you're new to React, it's totally fine to skip it.
 
 Goal: move some styles out of `App.css` into a CSS module.
 
